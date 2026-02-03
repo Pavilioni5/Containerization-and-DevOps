@@ -4,6 +4,6 @@
 **Batch** : B3
 
 ## LAB
-- [Experiment 1: date. object](./lab/exp1/README.md)
+- [Experiment 1: Virtual Machines vs Containers](./lab/exp1/README.md)
 
 ## THEORY
