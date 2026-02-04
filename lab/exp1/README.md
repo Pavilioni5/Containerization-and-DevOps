@@ -1,8 +1,6 @@
-<center>
 
 ## **Containerization and DevOps Lab**
 ## **EXPERIMENT – 01**
-</center>
 
 **Aim of the Experiment**
 
