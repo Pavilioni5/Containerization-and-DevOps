@@ -11,4 +11,5 @@
 - [Experiment 5: Docker – Volumes, Environment Variables, Monitoring & Networks](./lab/exp5/README.md)
 
 ## THEORY
+- [Docker Compose](./theory/Compose)
 - [Docker Swarm](./theory/swarm.md)
