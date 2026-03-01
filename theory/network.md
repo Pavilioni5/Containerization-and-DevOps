@@ -32,7 +32,7 @@ Docker provides several network drivers for different use cases:
 | `macvlan` | Separate house with own mailbox | Need real network IP per container |
 | `none` | Isolated room with no doors | Complete isolation needed |
 
->**we use `bridge` (the most common type) and `host`.**
+**we use `bridge` (the most common type) and `host`.**
 
 ---
 
@@ -87,7 +87,7 @@ docker network inspect bridge
 **Explanation:**  
 The default `bridge` network uses the `172.17.0.0/16` subnet and routes traffic through gateway `172.17.0.1`. The underlying virtual interface is named `docker0`. The `enable_ip_masquerade: true` option means containers can reach the internet via NAT.
 
-> ⚠️ **Important:** The default bridge network does **NOT** support DNS resolution by name. Containers can only reach each other by IP, not by container name. This is why we create a **custom bridge**.
+**Important:** The default bridge network does **NOT** support DNS resolution by name. Containers can only reach each other by IP, not by container name. This is why we create a **custom bridge**.
 
 ---
 
@@ -167,7 +167,7 @@ d525cc4a02bbee90c344acd1992c5ef81d6f005ff4c82d76600659792b486862
 | `--name` | Assign a human-readable name to the container |
 | `--network` | Connect the container to the specified network |
 
-> **Note:** The first time an image is used, Docker pulls it from Docker Hub. Subsequent runs use the local cached image.
+**Note:** The first time an image is used, Docker pulls it from Docker Hub. Subsequent runs use the local cached image.
 
 ---
 
@@ -194,7 +194,8 @@ round-trip min/avg/max = 0.070/0.112/0.397 ms
 - **0% packet loss** confirms the two containers are communicating successfully on the same custom bridge network.
 - **Round-trip time ~0.112ms** — very low latency since both containers are on the same host.
 
-> ✅ **Magic moment:** This only works because both containers are on the same **user-defined bridge**. The default bridge network does NOT support this name-based DNS.
+
+**Magic moment:** This only works because both containers are on the same **user-defined bridge**. The default bridge network does NOT support this name-based DNS.
 
 ---
 
@@ -286,7 +287,7 @@ PING 172.17.0.2 (172.17.0.2): 56 data bytes
 **Explanation:**  
 `172.17.0.2` is an IP in the **default bridge** network (`172.17.0.0/16`). `container2` lives in `my_bridge` (`172.18.0.0/16`). Since these are **two separate networks**, Docker's isolation rules prevent communication — `100% packet loss` is the expected, correct result.
 
-> ✅ **This proves network isolation works:** Containers on different Docker networks cannot talk to each other unless explicitly connected.
+**This proves network isolation works:** Containers on different Docker networks cannot talk to each other unless explicitly connected.
 
 ---
 
@@ -324,10 +325,10 @@ The `ss -tulnp` command lists all listening TCP/UDP sockets:
 | `*:80` | Listening on all interfaces on port 80 |
 | `0.0.0.0:6080` | Another process on port 6080 |
 
-> ⚠️ **When NOT to use host network:**
-> - When you need isolation (containers may conflict with host services)
-> - On Docker Desktop for Mac/Windows (limited support)
-> - When running multiple containers needing the same ports
+**When NOT to use host network:**
+- When you need isolation (containers may conflict with host services)
+- On Docker Desktop for Mac/Windows (limited support)
+- When running multiple containers needing the same ports
 
 ---
 
@@ -772,3 +773,4 @@ tcp   LISTEN 0      100           0.0.0.0:6080       0.0.0.0:*    users:(("nova-
 tcp   LISTEN 0      511                 *:80               *:*
 tcp   LISTEN 0      4096                *:2380             *:*
 aniket@Aniket:~$
+```

@@ -191,27 +191,26 @@ edited to use a free port, then started again:
   -----------------------------------------------------------------------
 **Check the webside**
 
-```http://localhost:9090```
+```
+http://localhost:9090
+```
 
 ![wordpress](wordpress.png)
 
 If WordPress is working, that means:
-
-✅ MySQL container is running
-
-✅ WordPress container is running
-
-✅ Network is working
-
-✅ Volumes are mounted correctly
+- MySQL container is running
+- WordPress container is running
+- Network is working
+- Volumes are mounted correctly
 
 ---
 
 **Attempt Service Scaling**
 
-> docker compose up \--scale wordpress=3 -d
+```
+docker compose up \--scale wordpress=3 -d
+```
 
-  -----------------------------------------------------------------------
   **Command:** docker compose up \--scale \<service\>=\<count\> -d ---
   Attempts to run the specified number of replicas of a service. This is
   useful for load testing or high availability setups.
@@ -219,6 +218,7 @@ If WordPress is working, that means:
   -----------------------------------------------------------------------
 
 However, this produced a warning:
+
 ```
 docker compose up --scale wordpress=3 -d
 WARN[0000] /mnt/d/ccvt/sem 6/devops/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
@@ -226,7 +226,7 @@ WARN[0000] /mnt/d/ccvt/sem 6/devops/docker-compose.yml: the attribute `version` 
  ✔ Container mysql Running                                              0.0s
 WARNING: The "wordpress" service is using the custom container name "wordpress". Docker requires each container to have a unique name. Remove the custom name to scale the service
 ```
-  -----------------------------------------------------------------------
+
   **Explanation:** The container_name: wordpress field in the compose
   file forces all replicas to use the same name. Since Docker container
   names must be unique, scaling fails. To enable scaling, remove the
@@ -237,17 +237,17 @@ WARNING: The "wordpress" service is using the custom container name "wordpress".
 
 **Tear Down**
 
-> docker compose down
+```
+docker compose down
+```
 
 This cleanly removes all containers and networks created during the
 session. Final output:
-
-> ✔ Container wordpress Removed 1.5s
->
-> ✔ Container mysql Removed 1.8s
->
-> ✔ Network devops_wordpress-network Removed 0.3s
-
+```
+✔ Container wordpress Removed 1.5s
+✔ Container mysql Removed 1.8s
+✔ Network devops_wordpress-network Removed 0.3s
+```
 ---
 **3. Quick Reference Cheatsheet: Docker Compose CLI**
 
