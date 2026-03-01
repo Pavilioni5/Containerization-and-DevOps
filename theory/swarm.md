@@ -1,6 +1,6 @@
 ## Docker Swarm 
 
-### 1. Environment Details
+### Environment Details
 
 | Property | Value |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## 3. Step-by-Step Procedure
+### Step-by-Step Procedure
 
 ### Initialize Docker Swarm
 
