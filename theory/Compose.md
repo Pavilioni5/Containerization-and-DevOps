@@ -17,14 +17,13 @@ error-prone for complex setups.
 
 ```
 Example: Running Nginx with docker run
-docker run \\
-\--name my-nginx \\
--p 8080:80 \\
--v ./html:/usr/share/nginx/html \\
--e NGINX_HOST=localhost \\
-\--restart unless-stopped \\
--d \\
- nginx:alpine
+docker run -d \
+  --name my-nginx \
+  -p 8080:80 \
+  -v ./html:/usr/share/nginx/html \
+  -e NGINX_HOST=localhost \
+  --restart unless-stopped \
+  nginx:alpine
 ```
 **What is Docker Compose?**
 
@@ -32,33 +31,22 @@ Docker Compose is a declarative approach --- you define WHAT you want,
 not HOW to do it. All the same configuration that you would pass to
 docker run is written once in a YAML file and can be reused,
 version-controlled, and shared with team members.
+```
+# docker-compose.yml
+version: 3.8
 
-> \# docker-compose.yml
->
-> version: \'3.8\'
->
-> services:
->
-> nginx:
->
-> image: nginx:alpine
->
-> container_name: my-nginx
->
-> ports:
->
-> \- \"8080:80\"
->
-> volumes:
->
-> \- ./html:/usr/share/nginx/html
->
-> environment:
->
-> \- NGINX_HOST=localhost
->
-> restart: unless-stopped
-
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: my-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    environment:
+      - NGINX_HOST=localhost
+    restart: unless-stopped
+```
 **Key Advantages of Docker Compose**
 
 -   Simplicity: One command (docker compose up -d) starts the entire
