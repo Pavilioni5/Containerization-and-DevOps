@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+
+ database:
+   build: ./database
+   container_name: studentdb
+   volumes:
+     - student_pgdata:/var/lib/postgresql/data
+   networks:
+     student_macvlan:
+       ipv4_address: 192.168.1.101
+   restart: always
+
+ backend:
+   build: ./backend
+   container_name: studentapi
+   environment:
+     DB_HOST: 192.168.1.101
+     DB_NAME: studentdb
+     DB_USER: appuser
+     DB_PASSWORD: strongpassword
+   depends_on:
+     - database
+   networks:
+     student_macvlan:
+       ipv4_address: 192.168.1.100
+   restart: always
+
+networks:
+ student_macvlan:
+   external: true
+
+volumes:
+ student_pgdata:
