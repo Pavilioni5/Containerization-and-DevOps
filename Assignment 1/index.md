@@ -2,10 +2,20 @@
 layout: default
 title: Containerized Web App
 ---
-
-
 # Docker_WebApp
 Containerized Student Records REST API built with Node.js and PostgreSQL using Docker Compose, Macvlan networking, and persistent Docker volumes.
+
+---
+
+<a href="https://github.com/Pavilioni5/Containerization-and-DevOps/tree/main/Assignment%201" target="_blank">
+  <img src="https://img.shields.io/badge/View%20on%20GitHub-24292e?style=for-the-badge&logo=github&logoColor=white">
+</a>
+
+---
+
+<a href="./Documentation%20and%20Screenshot.pdf" target="_blank">
+  <img src="https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge&logo=readthedocs&logoColor=white">
+</a>
 
 ---
 
