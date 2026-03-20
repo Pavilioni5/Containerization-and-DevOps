@@ -18,4 +18,4 @@
 - [Docker Swarm](./theory/swarm.md)
 
 ## Assignment 1
-- [Docker_WebApp](./Assignment%201/README.md)
+- [Docker Web App](./Assignment%201/)
