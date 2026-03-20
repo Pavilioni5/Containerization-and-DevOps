@@ -7,16 +7,10 @@ Containerized Student Records REST API built with Node.js and PostgreSQL using D
 
 ---
 
-<a href="https://github.com/Pavilioni5/Containerization-and-DevOps/tree/main/Assignment%201" target="_blank">
-  <img src="https://img.shields.io/badge/View%20on%20GitHub-24292e?style=for-the-badge&logo=github&logoColor=white">
-</a>
-
+[![View on GitHub](https://img.shields.io/badge/View%20on-GitHub-black?logo=github&style=for-the-badge)](https://github.com/Pavilioni5/Containerization-and-DevOps/tree/main/Assignment%201)
 ---
 
-<a href="./Documentation%20and%20Screenshot.pdf" target="_blank">
-  <img src="https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge&logo=readthedocs&logoColor=white">
-</a>
-
+[![Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge&logo=readthedocs)](./Documentation%20and%20Screenshot.pdf)
 ---
 
 ## 1. Introduction
