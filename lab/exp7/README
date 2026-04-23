@@ -5,6 +5,9 @@
 ### Aim: Design and implement a complete CI/CD pipeline using Jenkins, integrating source code from GitHub, and building & pushing Docker images to Docker Hub.
 
 ---
+### GitHub repository link
+[![View on GitHub](https://img.shields.io/badge/View%20on-GitHub-black?logo=github&style=for-the-badge)](https://github.com/Pavilioni5/my-app)
+
 
 ## Theory
 
@@ -720,14 +723,14 @@ Result: Branch not found → Build fails
 Change the `git` step in the Jenkinsfile from:
 
 ```groovy
-// Wrong — branch does not exist
+
 git branch: 'master', url: 'https://github.com/Pavilioni5/my-app.git'
 ```
 
 To:
 
 ```groovy
-// Correct — matches the actual branch name
+
 git branch: 'main', url: 'https://github.com/Pavilioni5/my-app.git'
 ```
 
@@ -742,7 +745,7 @@ Go to the pipeline job → **Configure** → **Branch Specifier** and set it to:
 
 ```bash
 git branch -a
-# or check on GitHub under the branch dropdown
+
 ```
 
 ---
