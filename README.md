@@ -12,6 +12,8 @@
 - [Experiment 5: Docker – Volumes, Environment Variables, Monitoring & Networks](./lab/exp5/README.md)
 - [Experiment 6: Docker Run vs Docker Compose: Multi-Container Application Orchestration](./lab/exp6/README.md)
 - [Experiment 7: CI/CD Pipeline using Jenkins, GitHub & Docker Hub](./lab/exp7/README.md)
+- [Experiment 8: Chef – Configuration Management](./lab/exp8/README.md)
+- [Experiment 9: Ansible — Automated Server Configuration Management](./lab/exp9/README.md)
 
 ## THEORY
 - [Docker Volume](./theory/volume.md)
