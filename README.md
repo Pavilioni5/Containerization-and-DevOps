@@ -14,6 +14,8 @@
 - [Experiment 7: CI/CD Pipeline using Jenkins, GitHub & Docker Hub](./lab/exp7/README.md)
 - [Experiment 8: Chef – Configuration Management](./lab/exp8/README.md)
 - [Experiment 9: Ansible — Automated Server Configuration Management](./lab/exp9/README.md)
+- [Experiment 11: Container Orchestration using Docker Compose & Docker Swarm](./lab/exp11/README.md)
+- [Experiment 12: Container Orchestration using Kubernetes](./lab/exp12/README.md)
 
 ## THEORY
 - [Docker Volume](./theory/volume.md)
